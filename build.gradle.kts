@@ -9,7 +9,7 @@ dependencies {
 }
 
 group = "com.nancheung.plugins.jetbrains"
-version = "1.4.1"
+version = "1.4.2"
 
 repositories {
     mavenCentral()
@@ -31,6 +31,7 @@ tasks {
     withType<JavaCompile> {
         sourceCompatibility = "11"
         targetCompatibility = "11"
+        options.encoding = "UTF-8"
     }
 
     patchPluginXml {

@@ -19,6 +19,12 @@
   ]]></description>
 
     <change-notes><![CDATA[
+       <h2>V1.4.2<h2>
+        <h3>特性</h3>
+        <ul>
+            <li>新增显示/隐藏插件窗口快捷键 ALT+W </li>
+        </ul>
+        <hr>
         <h2>V1.4.1<h2>
         <h3>特性</h3>
         <ul>
@@ -98,12 +104,18 @@
             <keyboard-shortcut keymap="$default" first-keystroke="shift alt RIGHT"/>
         </action>
 
+        <action id="com.nancheung.legado-reader.action.showHideToolWindow" class="com.nancheung.plugins.jetbrains.legadoreader.action.ShowHideToolWindowAction"
+                text="显示/隐藏插件窗口" icon="/icons/showHide.svg">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt W"/>
+        </action>
+
         <group id="com.nancheung.legado-reader.bar.textBodyToolbar">
             <action id="com.nancheung.legado-reader.action.backBookshelf" class="com.nancheung.plugins.jetbrains.legadoreader.action.BackBookshelfAction"
                     text="返回书架" icon="/icons/back.svg"/>
             <separator/>
             <reference id="com.nancheung.legado-reader.action.previousChapter"/>
             <reference id="com.nancheung.legado-reader.action.nextChapter"/>
+            <reference id="com.nancheung.legado-reader.action.showHideToolWindow"/>
             <separator/>
             <action id="com.nancheung.legado-reader.action.showBookInfo" class="com.nancheung.plugins.jetbrains.legadoreader.action.ShowBookInfoAction"
                     text="当前阅读信息" icon="/icons/showBookInfo.svg"/>

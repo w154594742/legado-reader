@@ -2,9 +2,9 @@ package com.nancheung.plugins.jetbrains.legadoreader.common;
 
 public interface Constant {
     /**
-     * 插件包名
+     * 插件toolWindow id
      */
-    String PLUGIN_PACKAGE = "com.nancheung.plugins.jetbrains.legado-reader";
+    String PLUGIN_TOOL_WINDOW_ID = "Legado Reader";
     /**
      * 插件id前缀
      */
@@ -18,15 +18,6 @@ public interface Constant {
      * action id前缀
      */
     String PLUGIN_ACTION_ID_PREFIX = PLUGIN_ID_PREFIX + ".action";
-    
-    /**
-     * action 上一章id
-     */
-    String PLUGIN_ACTION_PREVIOUS_CHAPTER_ID = PLUGIN_ACTION_ID_PREFIX + ".previousChapter";
-    /**
-     * action 下一章id
-     */
-    String PLUGIN_ACTION_NEXT_CHAPTER_ID = PLUGIN_ACTION_ID_PREFIX + ".nextChapter";
     
     /**
      * 正文阅读tool bar
