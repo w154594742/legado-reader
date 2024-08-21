@@ -19,12 +19,21 @@
   ]]></description>
 
     <change-notes><![CDATA[
-       <h2>V1.4.2<h2>
+        <h2>V1.4.3<h2>
+        <h3>特性</h3>
+        <ul>
+            <li>新增章节目录按钮点击显示章节目录，点击章节可跳转</li>
+            <li>修改书籍列表表格表头文案</li>
+        </ul>
+        <hr>
+
+        <h2>V1.4.2<h2>
         <h3>特性</h3>
         <ul>
             <li>新增显示/隐藏插件窗口快捷键 ALT+W </li>
         </ul>
         <hr>
+
         <h2>V1.4.1<h2>
         <h3>特性</h3>
         <ul>
@@ -89,7 +98,7 @@
 
         <toolWindow id="Legado Reader"
                     secondary="true"
-                    anchor="right" factoryClass="com.nancheung.plugins.jetbrains.legadoreader.toolwindow.IndexWindowFactory" icon="/META-INF/pluginIcon.svg">
+                    anchor="right" factoryClass="com.nancheung.plugins.jetbrains.legadoreader.toolwindow.IndexWindowFactory" icon="/icons/pluginIcon.svg">
         </toolWindow>
 
         <editor.linePainter implementation="com.nancheung.plugins.jetbrains.legadoreader.editorline.ReaderEditorLinePainter"/>
@@ -119,6 +128,8 @@
             <separator/>
             <action id="com.nancheung.legado-reader.action.showBookInfo" class="com.nancheung.plugins.jetbrains.legadoreader.action.ShowBookInfoAction"
                     text="当前阅读信息" icon="/icons/showBookInfo.svg"/>
+            <action id="com.nancheung.legado-reader.action.showBookChapterList" class="com.nancheung.plugins.jetbrains.legadoreader.action.ShowBookChapterListAction"
+                    text="章节目录" icon="/icons/showBookChapterList.svg"/>
         </group>
 
     </actions>

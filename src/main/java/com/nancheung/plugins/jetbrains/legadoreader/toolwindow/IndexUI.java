@@ -27,7 +27,6 @@ public class IndexUI {
 
     private static final Logger log = Logger.getInstance(IndexUI.class);
 
-
     /**
      * 主面板
      */
@@ -83,7 +82,10 @@ public class IndexUI {
      */
     private JTextPane textBodyErrorTipsPane;
 
-    private static final DefaultTableModel BOOK_SHELF_TABLE_MODEL = new DefaultTableModel(null, new String[]{"name", "current", "new", "author"}) {
+    /**
+     * 书籍信息表格表头
+     */
+    private static final DefaultTableModel BOOK_SHELF_TABLE_MODEL = new DefaultTableModel(null, new String[]{"书名", "当前章节", "最新章节", "作者"}) {
         @Override
         public boolean isCellEditable(int row, int column) {
             // 表格不允许被编辑
