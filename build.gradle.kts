@@ -1,7 +1,12 @@
 plugins {
     id("java")
     id("org.jetbrains.intellij") version "1.9.0"
-    id ("io.freefair.lombok") version "6.6.1"
+    id("io.freefair.lombok") version "6.6.1"
+    id("org.zeroturnaround.gradle.jrebel") version "1.2.0" apply false
+}
+
+allprojects {
+    apply (plugin = "org.zeroturnaround.gradle.jrebel")
 }
 
 dependencies {
@@ -13,6 +18,7 @@ version = "1.4.3"
 
 repositories {
     mavenCentral()
+    gradlePluginPortal()
 }
 
 
@@ -34,6 +40,10 @@ tasks {
         options.encoding = "UTF-8"
     }
 
+    processResources{
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+
     patchPluginXml {
         sinceBuild.set("201")
     }
@@ -47,4 +57,11 @@ tasks {
     publishPlugin {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
+
+    runIde {
+        // 如果想要使用jrebel热部署，这里jrebel64.dll的路径需要修改为自己电脑上的jrebel64.dll的路径
+        // 不用jrebel热部署修改为 jvmArgs = listOf() 即可
+        jvmArgs = listOf("-agentpath:C:\\Users\\Administrator\\AppData\\Roaming\\JetBrains\\IntelliJIdea2021.2\\plugins\\jr-ide-idea\\lib\\jrebel6\\lib\\jrebel64.dll")
+    }
+
 }

@@ -23,6 +23,10 @@ public class SettingUI {
     private JCheckBox enableErrorLogCheckBox;
 
     public SettingUI() {
+        // 为null时创建所有依赖对象（使用jrebel插件调试时会为null导致空指针异常）
+        this.createAllDependIfNull();
+
+
         // 正文大小输入范围
         textBodyFontSizeSpinner.setModel(new SpinnerNumberModel(0, 0, 100, 1));
         // 读取已有配置
@@ -33,7 +37,25 @@ public class SettingUI {
         // 正文字体颜色选择的点击事件
         textBodyFontColorLabel.addMouseListener(chooseColorMouseListener());
     }
-    
+
+    private void createAllDependIfNull() {
+        if(rootPanel == null){
+            rootPanel = new JPanel();
+        }
+        if(textBodyFontColorLabel == null){
+            textBodyFontColorLabel = new JLabel();
+        }
+        if(textBodyFontSizeSpinner == null){
+            textBodyFontSizeSpinner = new JSpinner();
+        }
+        if(apiCustomParamTextArea == null){
+            apiCustomParamTextArea = new JTextArea();
+        }
+        if(enableErrorLogCheckBox == null){
+            enableErrorLogCheckBox = new JCheckBox();
+        }
+    }
+
     @NotNull
     private MouseAdapter chooseColorMouseListener() {
         return new MouseAdapter() {

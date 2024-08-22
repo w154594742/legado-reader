@@ -140,6 +140,9 @@ public class IndexUI {
         // 初始化设置数据
         SettingFactory.instance();
 
+        // 为null时创建所有依赖对象（使用jrebel插件调试时会为null导致空指针异常）
+        this.createAllDependIfNull();
+
         // 隐藏正文面板
         textBodyPanel.setVisible(false);
         // 隐藏正文面板的错误提示
@@ -171,6 +174,48 @@ public class IndexUI {
         // 设置bar样式：无边框、不可拖动
         bar.setBorderPainted(false);
         bar.setFloatable(false);
+    }
+
+    private void createAllDependIfNull() {
+        if(rootPanel == null){
+            rootPanel = new JPanel();
+        }
+        if(bookshelfPanel == null){
+            bookshelfPanel = new JPanel();
+        }
+        if(textBodyPanel == null){
+            textBodyPanel = new JPanel();
+        }
+        if(bookshelfScrollPane == null){
+            bookshelfScrollPane = new JScrollPane();
+        }
+        if(bookshelfTable == null){
+            bookshelfTable = new JTable();
+        }
+        if(bookshelfErrorTipsPane == null){
+            bookshelfErrorTipsPane = new JTextPane();
+        }
+        if(textBodyScrollPane == null){
+            textBodyScrollPane = new JScrollPane();
+        }
+        if(textBodyPane == null){
+            textBodyPane = new JTextPane();
+        }
+        if(textBodyErrorTipsPane == null){
+            textBodyErrorTipsPane = new JTextPane();
+        }
+        if(refreshBookshelfButton == null){
+            refreshBookshelfButton = new JButton();
+        }
+        if(addressTextField == null){
+            addressTextField = new JTextField();
+        }
+        if(addressHistoryBox == null){
+            addressHistoryBox = new JComboBox<>();
+        }
+        if(bar == null){
+            bar = new JToolBar();
+        }
     }
 
     private ActionListener refreshBookshelfActionListener() {
