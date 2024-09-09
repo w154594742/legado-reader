@@ -106,11 +106,11 @@
     <actions>
         <action id="com.nancheung.legado-reader.action.previousChapter" class="com.nancheung.plugins.jetbrains.legadoreader.action.PreviousChapterAction"
                 text="上一章" icon="/icons/previousChapter.svg">
-            <keyboard-shortcut keymap="$default" first-keystroke="shift alt LEFT"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt A"/>
         </action>
         <action id="com.nancheung.legado-reader.action.nextChapter" class="com.nancheung.plugins.jetbrains.legadoreader.action.NextChapterAction"
                 text="下一章" icon="/icons/nextChapter.svg">
-            <keyboard-shortcut keymap="$default" first-keystroke="shift alt RIGHT"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt D"/>
         </action>
 
         <action id="com.nancheung.legado-reader.action.showHideToolWindow" class="com.nancheung.plugins.jetbrains.legadoreader.action.ShowHideToolWindowAction"
