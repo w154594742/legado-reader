@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugins>
-    <plugin id="com.nancheung.plugins.jetbrains.legado-reader" url="https://github.com/w154594742/legado-reader/releases/download/v1.4.2/legado-reader-1.4.2.zip" version="1.4.2">
+    <plugin id="com.nancheung.plugins.jetbrains.legado-reader" url="https://github.com/w154594742/legado-reader/releases/download/v1.4.4/legado-reader-1.4.4.zip" version="1.4.4">
         <name>Legado Reader</name>
 
         <description><![CDATA[
