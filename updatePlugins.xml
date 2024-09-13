@@ -9,6 +9,21 @@
      ]]></description>
 
         <change-notes><![CDATA[
+        <h2>V1.4.4<h2>
+        <h3>特性</h3>
+        <ul>
+            <li>新增通过输入章节序号跳转功能（因为有些有引子之类的章节，所以跳转可能不精确）</li>
+        </ul>
+        <hr>
+
+        <h2>V1.4.3<h2>
+        <h3>特性</h3>
+        <ul>
+            <li>新增章节目录按钮点击显示章节目录，点击章节可跳转</li>
+            <li>修改书籍列表表格表头文案</li>
+        </ul>
+        <hr>
+
         <h2>V1.4.2<h2>
         <h3>特性</h3>
         <ul>
@@ -58,12 +73,12 @@
             <li>在某些地方添加一些引导设置提示语</li>
         </ul>
         <hr>
-        <h3>更多说明</h3>
-        <ul>
-            <li>作者博客：https://blog.nancheung.com</li>
-            <li>项目地址：https://github.com/nancheung/legado-reader</li>
-            <li>最新版本下载与更新记录：https://github.com/nancheung/legado-reader/releases</li>
-        </ul>
+<!--        <h3>更多说明</h3>-->
+<!--        <ul>-->
+<!--            <li>作者博客：https://blog.nancheung.com</li>-->
+<!--            <li>项目地址：https://github.com/nancheung/legado-reader</li>-->
+<!--            <li>最新版本下载与更新记录：https://github.com/nancheung/legado-reader/releases</li>-->
+<!--        </ul>-->
 ]]></change-notes>
 
         <idea-version since-build="201" until-build="999.*"/>
