@@ -14,7 +14,7 @@ dependencies {
 }
 
 group = "com.nancheung.plugins.jetbrains"
-version = "1.4.3"
+version = "1.4.4"
 
 repositories {
     mavenCentral()
@@ -61,7 +61,8 @@ tasks {
     runIde {
         // 如果想要使用jrebel热部署，这里jrebel64.dll的路径需要修改为自己电脑上的jrebel64.dll的路径
         // 不用jrebel热部署修改为 jvmArgs = listOf() 即可
-        jvmArgs = listOf("-agentpath:C:\\Users\\Administrator\\AppData\\Roaming\\JetBrains\\IntelliJIdea2021.2\\plugins\\jr-ide-idea\\lib\\jrebel6\\lib\\jrebel64.dll")
+//        jvmArgs = listOf("-agentpath:C:\\Users\\Administrator\\AppData\\Roaming\\JetBrains\\IntelliJIdea2021.2\\plugins\\jr-ide-idea\\lib\\jrebel6\\lib\\jrebel64.dll")
+        jvmArgs = listOf()
     }
 
 }

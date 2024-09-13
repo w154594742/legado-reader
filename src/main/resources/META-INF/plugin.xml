@@ -19,6 +19,13 @@
   ]]></description>
 
     <change-notes><![CDATA[
+        <h2>V1.4.4<h2>
+        <h3>特性</h3>
+        <ul>
+            <li>新增通过输入章节序号跳转功能（因为有些有引子之类的章节，所以跳转可能不精确）</li>
+        </ul>
+        <hr>
+
         <h2>V1.4.3<h2>
         <h3>特性</h3>
         <ul>
@@ -118,6 +125,9 @@
             <keyboard-shortcut keymap="$default" first-keystroke="alt W"/>
         </action>
 
+        <action id="com.nancheung.legado-reader.action.goToChapter" class="com.nancheung.plugins.jetbrains.legadoreader.action.GoToChapterAction"
+                text="跳转到章节" icon="/icons/goToChapter.svg">
+        </action>
         <group id="com.nancheung.legado-reader.bar.textBodyToolbar">
             <action id="com.nancheung.legado-reader.action.backBookshelf" class="com.nancheung.plugins.jetbrains.legadoreader.action.BackBookshelfAction"
                     text="返回书架" icon="/icons/back.svg"/>
@@ -130,6 +140,8 @@
                     text="当前阅读信息" icon="/icons/showBookInfo.svg"/>
             <action id="com.nancheung.legado-reader.action.showBookChapterList" class="com.nancheung.plugins.jetbrains.legadoreader.action.ShowBookChapterListAction"
                     text="章节目录" icon="/icons/showBookChapterList.svg"/>
+            <!-- 跳转到章节输入框 -->
+            <reference id="com.nancheung.legado-reader.action.goToChapter"/>
         </group>
 
     </actions>
