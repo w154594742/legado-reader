@@ -125,9 +125,10 @@
             <keyboard-shortcut keymap="$default" first-keystroke="alt W"/>
         </action>
 
-        <action id="com.nancheung.legado-reader.action.goToChapter" class="com.nancheung.plugins.jetbrains.legadoreader.action.GoToChapterAction"
-                text="跳转到章节" icon="/icons/goToChapter.svg">
-        </action>
+<!--        <action id="com.nancheung.legado-reader.action.goToChapter" class="com.nancheung.plugins.jetbrains.legadoreader.action.GoToChapterAction"-->
+<!--                text="跳转到章节" icon="/icons/goToChapter.svg">-->
+<!--        </action>-->
+
         <group id="com.nancheung.legado-reader.bar.textBodyToolbar">
             <action id="com.nancheung.legado-reader.action.backBookshelf" class="com.nancheung.plugins.jetbrains.legadoreader.action.BackBookshelfAction"
                     text="返回书架" icon="/icons/back.svg"/>
@@ -140,8 +141,11 @@
                     text="当前阅读信息" icon="/icons/showBookInfo.svg"/>
             <action id="com.nancheung.legado-reader.action.showBookChapterList" class="com.nancheung.plugins.jetbrains.legadoreader.action.ShowBookChapterListAction"
                     text="章节目录" icon="/icons/showBookChapterList.svg"/>
-            <!-- 跳转到章节输入框 -->
-            <reference id="com.nancheung.legado-reader.action.goToChapter"/>
+<!--            &lt;!&ndash; 跳转到章节输入框 &ndash;&gt;-->
+<!--            <reference id="com.nancheung.legado-reader.action.goToChapter"/>-->
+            <!-- 直接添加输入框的 Action -->
+            <action id="com.nancheung.legado-reader.action.chapterInput" class="com.nancheung.plugins.jetbrains.legadoreader.action.ChapterInputAction"
+                    text="章节输入框"/>
         </group>
 
     </actions>
