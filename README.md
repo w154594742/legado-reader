@@ -78,5 +78,5 @@ Legado Reader是 [开源阅读APP](https://github.com/gedoor/legado) 的Jetbrain
 
    ……
 
-#特别说明
-Fork自https://github.com/nancheung/legado-reader，根据自身需求做了一些修改，感谢原作者[nancheung](https://github.com/nancheung)
+# 特别说明
+Fork自 [nancheung](https://github.com/nancheung) ，根据自身需求做了一些修改和功能增强，感谢原作者 [nancheung](https://github.com/nancheung)
